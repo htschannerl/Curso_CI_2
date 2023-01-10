@@ -11,6 +11,11 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
+    - name: Download main compilado
+      uses: actions/download-artifact@v3
+      with:
+        name: programa
+
     - name: setup Docker Buil
       uses: docker/setup-buildx-action@v2.0.0
 
